@@ -1,0 +1,25 @@
+- name: Android Release APK
+  # You may pin to the exact commit or the version.
+  # uses: Mattschoe/action-release-apk@2e140a35d68e21b9be22138801ef44abbf6b3bc3
+  uses: Mattschoe/action-release-apk@v1
+  with:
+    # JDK version to build with.
+    java-version: # optional, default is 21
+    # Gradle task that produces the release APK.
+    gradle-task: # optional, default is assembleRelease
+    # Path/glob of the built APK to attach to the release.
+    apk-path: # optional, default is app/build/outputs/apk/release/app-release.apk
+    # Where to write the decoded keystore (must match build.gradle.kts).
+    keystore-path: # optional, default is app/keystore.jks
+    # Optional extra Gradle task to generate docs (e.g. dokkaGenerate).
+    docs-task: # optional, default is 
+    # Optional directory to zip into documentation.zip and attach.
+    docs-dir: # optional, default is 
+    # Base64-encoded release keystore. Omit to build unsigned.
+    keystore-base64: # optional, default is 
+    # Keystore password.
+    keystore-password: # optional, default is 
+    # Key alias.
+    key-alias: # optional, default is 
+    # Key password.
+    key-password: # optional, default is 
